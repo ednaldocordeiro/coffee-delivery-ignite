@@ -31,5 +31,26 @@ export const HeaderContainer = styled.header`
       gap: .3rem;
       color: ${(props) => props.theme["purple-dark"]};
     }
+
+    .cart {
+      position: relative;
+    }
   }
+`
+
+export const Bullet = styled.div`
+  background: ${(props) => props.theme["yellow-dark"]};
+  height: 20px;
+  width: 20px;
+  padding: .3rem;
+  border-radius: 50%;
+
+  color: ${(props) => props.theme.white};
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+
+  position: absolute;
+  right: -8px;
+  top: -8.5px;
 `

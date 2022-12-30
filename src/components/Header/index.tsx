@@ -1,7 +1,7 @@
-import { HeaderContainer } from './styles'
+import { HeaderContainer, Bullet } from './styles'
 
 import logo from '../../assets/CoffeeDeliveryLogo.svg'
-import { MapPin, ShoppingCart } from 'phosphor-react'
+import { MapPin } from 'phosphor-react'
 import { CartButton } from '../CartButton'
 
 export function Header() {
@@ -16,7 +16,10 @@ export function Header() {
               Porto Alegre, RS
             </span>
           </a>
-          <CartButton color='yellow-light'/>
+          <div className='cart'>
+            <Bullet>3</Bullet>
+            <CartButton color='yellow-light'/>
+          </div>
         </nav>
       </div>
     </HeaderContainer>

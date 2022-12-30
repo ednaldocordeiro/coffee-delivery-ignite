@@ -13,11 +13,15 @@ export const GlobalStyles = createGlobalStyle`
     --webkit-font-smoothing: antialiased;
   }
   
-  body, input, button, text-area {
+  body, input, button, text-area, p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: ${(props) => props.theme["base-text"]};
+  }
+
+  input[type="radio"] {
+    display: none;
   }
 
   h1, h2, h3 {

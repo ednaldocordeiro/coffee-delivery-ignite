@@ -17,6 +17,7 @@ export const PresentationContainer = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  backdrop-filter: opacity(.3);
 
   @media (max-width: 1185px) {
     padding: 0 3rem;

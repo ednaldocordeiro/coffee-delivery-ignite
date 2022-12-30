@@ -1,8 +1,12 @@
 import { Bank, CreditCard, CurrencyDollarSimple, MapPinLine, Money } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 import { CoffeeCard } from "./CoffeeCard";
 import { CartContainer, AdressFormContainer, AdressContainer, PaymentContainer, SelectedCoffesContainer, PaymentFormContainer } from "./styles";
 
 export function Cart(){
+
+  const navigate = useNavigate();
+
   return (
     <CartContainer>
       <form className="container">
@@ -93,7 +97,7 @@ export function Cart(){
                 <strong className="totalPrice">R$ 33,20</strong>
               </div>
             </div>
-            <button type="submit">Confirmar pedido</button>
+            <button type="submit" onClick={() => navigate('/success')}>Confirmar pedido</button>
           </SelectedCoffesContainer>
         </div>
       </form>

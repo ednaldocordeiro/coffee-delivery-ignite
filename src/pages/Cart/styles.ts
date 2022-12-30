@@ -79,11 +79,23 @@ export const AdressFormContainer = styled.div`
     }
   }
 
+  .complemento {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: calc(100%/2 - 10px);
+      right: 16px;
+      font-style: italic;
+      color: ${(props) => props.theme["base-label"]};
+    }
+  }
+
   label {
     position: absolute;
     top: -100px;
     left: -100px;
-    opacity: 0
+    opacity: 0;
   }
 
   input {
@@ -99,6 +111,10 @@ export const AdressFormContainer = styled.div`
     &#complemento {
       flex: 1;
     } 
+
+    &::placeholder {
+      color: ${(props) => props.theme["base-label"]};
+    }
   }
 `
 
@@ -121,9 +137,17 @@ export const PaymentFormContainer = styled.div`
     flex: 1;
     gap: 1rem;
 
-    background-color: ${(props) => props.theme["base-button"]};;
+    background-color: ${(props) => props.theme["base-button"]};
     padding: 1rem;
     border-radius: 6px;
+
+    transition: background-color .2s;
+
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: ${(props) => props.theme["base-hover"]};
+    }
 
     label {
       font-size: .75rem;
@@ -133,6 +157,11 @@ export const PaymentFormContainer = styled.div`
     svg {
       color: ${(props) => props.theme["purple"]};
     }
+  }
+
+  .selected {
+    background-color: ${(props) => props.theme["purple-light"]};
+    border: 1px solid ${(props) => props.theme["purple"]};
   }
 `
 
@@ -175,5 +204,11 @@ export const SelectedCoffesContainer = styled.div`
     color: ${(props) => props.theme.white};
     border-radius: 6px;
     font-weight: bold;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: ${(props) => props.theme["yellow-dark"]};
+    }
   }
 `

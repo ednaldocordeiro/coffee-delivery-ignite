@@ -50,6 +50,10 @@ export const RemoveButton = styled.button`
   border: 0;
   border-radius: 6px;
 
+  &:hover {
+    background-color: ${(props) => props.theme["base-hover"]};
+  }
+
   svg {
     color: ${(props) => props.theme["purple"]};
   }

@@ -14,7 +14,17 @@ export const CartButtonContainer = styled(NavLink)<CartButtonProps>`
   align-items: center;
   border-radius: 6px;
 
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: ${(props) => props.color === "purple-dark" ?
+      props.theme.purple : props.theme[props.color]
+    };
+  }
+
   svg {
-    color: ${(props) => props.color === 'yellow-light' ? props.theme["yellow-dark"] : props.theme.white};
+    color: ${(props) => props.color === 'yellow-light' ? 
+      props.theme["yellow-dark"] : 
+      props.theme.white};
   }
 `

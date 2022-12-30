@@ -26,8 +26,11 @@ export function Cart(){
               <label htmlFor="numero">Número</label>
               <input type="text" id="numero" name="numero" placeholder="Número"/>
 
-              <label htmlFor="complemento">Complemento</label>
-              <input type="text" id="complemento" name="complemento" placeholder="Complemento"/>
+              <div className="complemento">
+                <label htmlFor="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" placeholder="Complemento" />
+                <span>Optional</span>
+              </div>
 
               <div>
                 <label htmlFor="bairro">Bairro</label>
@@ -50,7 +53,7 @@ export function Cart(){
               </div>
             </header>
             <PaymentFormContainer>
-              <div className="paymentType">
+              <div className="paymentType selected">
                 <CreditCard size={22}/>
                 <label htmlFor="creditCard">Cartão de crédito</label>
                 <input type="radio" id="creditCard" name="creditCard" value="credit card" checked/>

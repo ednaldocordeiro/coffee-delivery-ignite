@@ -94,7 +94,18 @@ export const MenuContainer = styled.section`
     padding: 0 3rem;
   }
 
-  .container {
+  & > .container {
     margin-top: 3.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @media (max-width: 1185px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 665px) {
+      justify-content: center;
+    }
   }
 `

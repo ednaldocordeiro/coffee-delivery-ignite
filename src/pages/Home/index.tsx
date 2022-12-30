@@ -4,6 +4,32 @@ import coffee from '../../assets/Coffee.svg'
 import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
 import { CoffeeCard } from "./components/CoffeeCard";
 
+import coffes from '../../mocks/menu.json'
+
+interface CoffeeCardProps {
+  data : {
+    id: number,
+    img: 'americano'|
+    'arabe'|
+    'cafeComLeite'|
+    'cafeGelado'|
+    'capuccino'|
+    'chocolateQuente'|
+    'cubano'|
+    'expresso'|
+    'expressoCremoso'|
+    'havaiano'|
+    'irlandes'|
+    'latte'|
+    'macchiato'|
+    'mochaccino',
+    tags: string[],
+    name: string,
+    description: string,
+    price: number,
+  }
+}
+
 export function Home(){
   return (
     <HomeContainer>
@@ -45,7 +71,9 @@ export function Home(){
       <MenuContainer>
         <h2>Nossos cafés</h2>
         <div className="container">
-          <CoffeeCard />
+          {coffes.map((coffee) => (
+            <CoffeeCard data={coffee} key={coffee.id}/>
+          ))}
         </div>
       </MenuContainer>
     </HomeContainer>

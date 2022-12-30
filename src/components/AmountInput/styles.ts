@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const AmountInputContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   width: 4.5rem;
   border-radius: 6px;

@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
 
   nav {
     display: flex;
+    gap: .75rem;
 
     .location {
       height: 38px;

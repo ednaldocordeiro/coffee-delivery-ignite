@@ -4,8 +4,9 @@ export const HeaderContainer = styled.header`
 
   position: sticky;
   top: 0;
-  background-color: ${(props) => props.theme.background};
+  background: ${(props) => `${props.theme.background}50`};
   z-index: 1;
+  backdrop-filter: blur(50px);
 
   .container {
     display: flex;

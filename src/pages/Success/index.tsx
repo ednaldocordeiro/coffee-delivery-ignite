@@ -1,8 +1,13 @@
 import { Timer, MapPin, CurrencyDollarSimple } from "phosphor-react";
+import { useContext } from "react";
 import delivery from '../../assets/delivery.svg'
+import { BuyCoffeeContext } from "../../contexts/BuyCoffeeContext";
 import { Icon, SuccessContainer } from "./styles";
 
 export function Success() {
+
+  const { currentAdress } = useContext(BuyCoffeeContext)
+
   return (
     <SuccessContainer>
       <section>
@@ -15,8 +20,8 @@ export function Success() {
                 <MapPin size={22}/>
               </Icon>
               <div>
-                <p>Entrega em <strong>Rua João Martinelli, 102</strong></p>
-                <p>Farrapos - Porto Alegre, RS</p>
+                <p>Entrega em <strong>{currentAdress.street}, {currentAdress.number}</strong></p>
+                <p>{currentAdress.district} - {currentAdress.city}, {currentAdress.state}</p>
               </div>
             </div>
             <div>
@@ -34,7 +39,7 @@ export function Success() {
               </Icon>
               <div>
                 <p>Pagamento na entrega</p>
-                <strong>Cartão de crédito</strong>
+                <strong>{currentAdress.paymentType.toLocaleUpperCase()}</strong>
               </div>
             </div>
           </div>

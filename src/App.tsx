@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import reactLogo from './assets/Background.svg'
-import { Header } from './components/Header'
-import { DefaultLayout } from './layouts/DefaultLayout'
+import { BuyCoffeeProvider } from './contexts/BuyCoffeeContext'
 import { Router } from './Router'
 import { GlobalStyles } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
@@ -13,7 +10,9 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyles />
-        <Router />
+        <BuyCoffeeProvider>
+          <Router />
+        </BuyCoffeeProvider>
       </ThemeProvider>
     </BrowserRouter>
   )

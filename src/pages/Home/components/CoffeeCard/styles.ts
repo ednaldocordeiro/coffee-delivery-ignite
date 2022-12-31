@@ -10,6 +10,9 @@ export const CoffeeCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  justify-content: space-between;
+
   padding: 1.5rem;
 
   img {

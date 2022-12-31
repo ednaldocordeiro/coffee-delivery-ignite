@@ -15,17 +15,24 @@ export const AmountInputContainer = styled.div`
     background: transparent;
     border: 0;
 
+    cursor: pointer;
+
     svg {
       color: ${(props) => props.theme.purple}
     }
+
+    &:disabled {
+      filter: opacity(.5);
+    }
+
   }
 
-  input {
-    background-color: transparent;
+  p {
     border: 0;
     width: 20px;
     text-align: center;
-    font-size: 16px;
-    ${(props) => props.theme["base-title"]}
+    font-size: 1rem;
+    color: ${(props) => props.theme["base-title"]};
+    line-height: 1.3;
   }
 `

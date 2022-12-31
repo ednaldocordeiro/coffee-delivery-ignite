@@ -76,6 +76,7 @@ export const AdressFormContainer = styled.div`
     input#uf {
       width: 3.75rem;
       flex: 1;
+      text-transform: uppercase;
     }
   }
 
@@ -170,12 +171,6 @@ export const SelectedCoffesContainer = styled.div`
   border-radius: 6px 36px;
   background-color: ${(props) => props.theme["base-card"]};
   padding: 2.4rem;
-
-  .divider {
-    height: 1px;
-    background-color: ${(props) => props.theme["base-button"]};
-    margin: 1.5rem 0
-  }
 
   .prices {
     display: flex;

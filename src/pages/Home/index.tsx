@@ -5,6 +5,8 @@ import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
 import { CoffeeCard } from "./components/CoffeeCard";
 
 import coffes from '../../mocks/menu.json'
+import { useContext } from "react";
+import { BuyCoffeeContext } from "../../contexts/BuyCoffeeContext";
 
 interface CoffeeCardProps {
   data : {
@@ -31,6 +33,9 @@ interface CoffeeCardProps {
 }
 
 export function Home(){
+
+  const {coffeesState} = useContext(BuyCoffeeContext)
+
   return (
     <HomeContainer>
       <PresentationContainer>

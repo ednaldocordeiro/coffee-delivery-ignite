@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const CoffeeCardContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   .informations {
@@ -29,15 +30,25 @@ export const CoffeeCardContainer = styled.div`
 
   }
 
-  & > span {
-    color: ${(props) => props.theme["base-text"]};
-    font-size: 1rem;
-    font-weight: bold;
-
+  & > div {
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+
+    & > span {
+      color: ${(props) => props.theme["base-text"]};
+      font-size: 1rem;
+      font-weight: bold;
+
+      display: flex;
+      align-items: baseline;
+    }
   }
 
+  & .divider {
+    height: 1px;
+    background-color: ${(props) => props.theme["base-button"]};
+    margin: 1.5rem 0;
+  }
 `
 
 export const RemoveButton = styled.button`

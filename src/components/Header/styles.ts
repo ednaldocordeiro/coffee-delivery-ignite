@@ -2,10 +2,16 @@ import styled from "styled-components"
 
 export const HeaderContainer = styled.header`
 
+  position: sticky;
+  top: 0;
+  background-color: ${(props) => props.theme.background};
+  z-index: 1;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 
     max-width: 1120px;
     margin: 0 auto;
